@@ -8,19 +8,15 @@
 </head>
 <body>
     <script>
-        document.write("Desafio A,B,C: ");
-        var a = 10;
-        var b = 20;
-        var c = null;
-        document.write("---------------------------------------<br>")
-        document.write("A = "+  a);
-        document.write("B = "+  b);
-        c = a; 
-        a = b;
-        b = c;
-        document.write("---------------------------------------<br>")
-        document.write("A = "+  a);
-        document.write("B = "+  b);
+    
+       function calcularAreaTerreno(a,b){
+           return a*b;
+       }
+       var a = prompt("Digite a Largura ");
+       var b = prompt("Digite o comprimento ");
+       var area = calcularAreaTerreno(a,b);
+       console.log("Area do terreno : " + area);
+       
     </script>
     
 </body>
