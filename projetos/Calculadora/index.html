@@ -66,7 +66,7 @@
               <button onclick="calcular('valor','7')" type="button" class="btn btn-dark btn-lg font-weight-light">7</button>
               <button onclick="calcular('valor','8')" type="button" class="btn btn-dark btn-lg font-weight-light">8</button>
               <button onclick="calcular('valor','9')" type="button" class="btn btn-dark btn-lg font-weight-light">9</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">-</button>
+              <button onclick="calcular('acao','-')" type="button" class="btn btn-dark btn-lg font-weight-light">-</button>
             </div>
             
             <div class="row">
@@ -95,9 +95,17 @@
     <script>
       function calcular(tipo, valor){
         if(tipo === 'acao'){
-          
+          if(valor === 'c'){
+            document.getElementById('resultado').value = '';
+          }
+          if(valor === '+' || valor === '-' || valor === '*' || valor === '/' || valor === '.'){
+            document.getElementById('resultado').value += valor;
+          }
+          if(valor === '='){
+            document.getElementById('resultado').value = eval(document.getElementById('resultado').value);
+          }
         }else if(tipo === 'valor'){
-
+            document.getElementById('resultado').value += valor;
         }
       }
     </script>
